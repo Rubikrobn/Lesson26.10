@@ -1,11 +1,11 @@
-public class CEO extends Manager {
+public class CEO extends Manager implements EmployeeServise{
     private boolean hasCompanyCar;
     public CEO(){
 
     }
 
-    public CEO(String fullname, int age, int salary, boolean hasStocks, boolean hasCompanyCar, String cause) {
-        super(fullname, age, salary, hasStocks, cause);
+    public CEO(String fullname, int age, int salary, boolean hasStocks, boolean hasCompanyCar, String cause, String Vacation) {
+        super(fullname, age, salary, hasStocks, cause, Vacation);
         this.hasCompanyCar = hasCompanyCar;
     }
 
@@ -21,6 +21,18 @@ public class CEO extends Manager {
     }
     public void goToDayOff() {
         System.out.println(this.getCause());
+    }
+
+    @Override
+    public void goToVacation() {
+        super.goToVacation();
+
+    }
+
+    @Override
+    public void goToVacation1() {
+        System.out.println(getVacation());
+
     }
 
     @Override

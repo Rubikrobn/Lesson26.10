@@ -1,12 +1,13 @@
-public class Specialist extends Employee{
+public class Specialist extends Employee implements EmployeeServise{
     private int levels;
+
 
     public Specialist(){
 
     }
 
-    public Specialist(String fullname, int age, int salary, int levels, String cause ) {
-        super(fullname, age, salary, cause);
+    public Specialist(String fullname, int age, int salary, int levels, String cause, String Vacation ) {
+        super(fullname, age, salary, cause,Vacation);
         this.levels = levels;
     }
 
@@ -26,6 +27,17 @@ public class Specialist extends Employee{
 
     }
 
+
+    @Override
+    public void goToVacation() {
+        super.goToVacation();
+    }
+
+    @Override
+    public void goToVacation1() {
+        System.out.println(getVacation());
+
+    }
 
     @Override
     public String toString() {

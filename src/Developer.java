@@ -1,11 +1,12 @@
-public class Developer extends Employee{
+public class Developer extends Employee implements EmployeeServise{
     private String grades;
+
 
     public Developer(){
     }
 
-    public Developer(String fullname, int age, int salary, String grades, String cause) {
-        super(fullname, age, salary, cause);
+    public Developer(String fullname, int age, int salary, String grades, String cause, String Vacation) {
+        super(fullname, age, salary, cause, Vacation);
         this.grades = grades;
     }
 
@@ -30,5 +31,17 @@ public class Developer extends Employee{
                 "Возраст: "+getAge()+"\n"+
         "Зарплата: "+getSalary()+"\n"+
                 "Уровень: "+getGrades();
+    }
+
+    @Override
+    public void goToVacation1() {
+        System.out.println(getVacation());
+
+    }
+
+    @Override
+    public void goToVacation() {
+        super.goToVacation();
+
     }
 }

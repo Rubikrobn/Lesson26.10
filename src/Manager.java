@@ -1,10 +1,10 @@
-public class Manager extends Employee{
+public class Manager extends Employee implements EmployeeServise{
     private boolean hasStocks;
 public Manager(){
 
 }
-    public Manager(String fullname, int age, int salary, boolean hasStocks, String cause) {
-        super(fullname, age, salary, cause);
+    public Manager(String fullname, int age, int salary, boolean hasStocks, String cause, String Vacation) {
+        super(fullname, age, salary, cause, Vacation);
         this.hasStocks = hasStocks;
     }
 
@@ -24,6 +24,19 @@ public Manager(){
     }
     public void goToDayOff() {
         System.out.println(this.getCause());
+    }
+
+    @Override
+    public void goToVacation() {
+        super.goToVacation();
+
+
+    }
+
+    @Override
+    public void goToVacation1() {
+        System.out.println(getVacation());
+
     }
 
     @Override
